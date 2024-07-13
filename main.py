@@ -2,6 +2,7 @@ import argparse
 import datetime
 import json
 import os
+import sys
 
 import cv2
 import hyperlpr3 as lpr3
