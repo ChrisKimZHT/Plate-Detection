@@ -77,7 +77,11 @@ if __name__ == '__main__':
 
     if not os.path.exists(args.output_path):
         os.makedirs(args.output_path)
+
+    if not os.path.exists(os.path.join(args.output_path, 'boxed')):
         os.makedirs(os.path.join(args.output_path, 'boxed'))
+    
+    if not os.path.exists(os.path.join(args.output_path, 'crop')):
         os.makedirs(os.path.join(args.output_path, 'crop'))
 
     if args.log_file is not None:
