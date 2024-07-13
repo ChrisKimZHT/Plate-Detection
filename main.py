@@ -4,7 +4,6 @@ import json
 import os
 
 import cv2
-import numpy as np
 import hyperlpr3 as lpr3
 from tqdm import tqdm
 
@@ -14,7 +13,7 @@ def draw_plate_on_image(img, box):
     h, w, _ = img.shape
     img_crop = img[y1:y2, x1:x2].copy()
     cv2.rectangle(img, (max(0, x1 - 5), max(0, y1 - 5)), (min(x2 + 5,
-                  h - 1), min(y2 + 5, w - 1)), (0, 255, 0), 5, cv2.LINE_AA)
+                  w - 1), min(y2 + 5, h - 1)), (0, 255, 0), 5, cv2.LINE_AA)
     return img, img_crop
 
 
