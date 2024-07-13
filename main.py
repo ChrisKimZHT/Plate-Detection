@@ -26,7 +26,7 @@ def main(video_input: str, output_path: str):
     box_id = 0
     result = {}
 
-    for i in tqdm(range(total_frames)):
+    for i in tqdm(range(total_frames), dynamic_ncols=True):
         ret, frame = capture.read()
         if not ret:
             break
