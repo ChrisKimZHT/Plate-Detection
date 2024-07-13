@@ -1,0 +1,4 @@
+video/*
+!video/.gitkeep
+outputs/*
+!outputs/.gitkeep
