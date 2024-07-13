@@ -43,7 +43,7 @@ def main(video_input: str, output_path: str):
             result[code].append({
                 'frame_id': i,
                 'box_id': box_id,
-                'confidence': confidence,
+                'confidence': float(confidence),
                 'box': box
             })
 
